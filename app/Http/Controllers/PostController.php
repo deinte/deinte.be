@@ -9,12 +9,10 @@ class PostController extends Controller
 {
     public function index()
     {
-        //
     }
 
     public function show(Post $post): View
     {
-        ray('test');
         return view('pages.posts.show', compact('post'));
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Models\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use League\CommonMark\CommonMarkConverter;
+use Spatie\LaravelMarkdown\MarkdownRenderer;
 
 class Post extends Model
 {
@@ -25,8 +25,7 @@ class Post extends Model
 
     public function getTextAsHtmlAttribute(): string
     {
-        $converter = new CommonMarkConverter();
-        return $converter->convert($this->text);
+        return app(MarkdownRenderer::class)->toHtml($this->text);
     }
 
     public function resolveRouteBinding($value, $field = null): ?Model
