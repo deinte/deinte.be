@@ -11,6 +11,7 @@ class Post extends Model
 {
     use HasFactory;
     use HasSlug;
+    use HasFactory;
 
     protected $guarded = ['id'];
 
