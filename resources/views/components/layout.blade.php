@@ -6,8 +6,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div>
-    {{ $slot }}
-</div>
+    <div class="flex flex-row min-h-screen">
+        <nav class="flex flex-col bg-gray-100 px-8 w-1/5">
+            <a href="{{ route('posts.index') }}">Posts</a>
+        </nav>
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
 </body>
 </html>

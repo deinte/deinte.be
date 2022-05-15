@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 class Post extends Resource
 {
@@ -58,7 +59,9 @@ class Post extends Resource
             Boolean::make('Gepubliceerd', 'published'),
 
             Markdown::make('Text', 'text')
-                ->showOnPreview()
+                ->showOnPreview(),
+
+            new Panel('SEO Fields', $this->seoFields())
         ];
     }
 
@@ -104,5 +107,11 @@ class Post extends Resource
     public function actions(NovaRequest $request)
     {
         return [];
+    }
+
+    protected function seoFields(): array
+    {
+        return [
+        ];
     }
 }

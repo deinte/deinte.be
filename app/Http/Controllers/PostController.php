@@ -9,6 +9,9 @@ class PostController extends Controller
 {
     public function index()
     {
+        return view('pages.posts.index', [
+            'posts' => Post::published()->get()
+        ]);
     }
 
     public function show(Post $post): View
