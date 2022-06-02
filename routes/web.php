@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ShowHomePageController::class);
+Route::get('/', ShowHomePageController::class)->name('index');
 Route::resource('posts', PostController::class)->only('index', 'show');
