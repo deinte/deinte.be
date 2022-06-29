@@ -1,6 +1,8 @@
 @props(['route', 'label'])
 
 <a
-    class="block underline text-sky-700 hover:text-sky-700"
+    @class([
+        'transition-all block font-semibold border-b border-gray-700 text-gray-700 hover:text-gray-500'
+    ])
     href="{{ $route }}"
 >{{ $label }}</a>
