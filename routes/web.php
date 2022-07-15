@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Contact\ShowContactFormController;
 use App\Http\Controllers\Pages\ShowHomePageController;
 use App\Http\Controllers\Pages\ShowProjectsController;
 use App\Http\Controllers\PostController;
@@ -17,5 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', ShowHomePageController::class)->name('index');
-Route::get('/projects/', ShowProjectsController::class)->name('projects.show');
+Route::get('/projects', ShowProjectsController::class)->name('projects.show');
+Route::get('/contact', ShowContactFormController::class)->name('contact.show');
+
 Route::resource('posts', PostController::class)->only('index', 'show');

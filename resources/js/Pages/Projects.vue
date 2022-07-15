@@ -1,17 +1,33 @@
 <template>
-    <App>
-      <div>ehy</div>
-    </App>
+  <App>
+
+    <div class="grid grid-cols-3 gap-y-4">
+      <template v-for="project in projects">
+        <project-card :project="project"/>
+      </template>
+    </div>
+
+
+  </App>
 </template>
 
 <script>
 import App from "../Components/Layouts/App";
+import ProjectCard from "../Components/Projects/ProjectCard";
 
 export default {
   name: "Projects",
 
   components: {
+    ProjectCard,
     App
+  },
+
+  props: {
+    projects: {
+      type: Array,
+      required: true,
+    }
   }
 }
 </script>

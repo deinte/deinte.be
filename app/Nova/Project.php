@@ -28,8 +28,7 @@ class Project extends Resource
             Text::make('title')
                 ->rules(['required']),
 
-            Text::make('subtitle')
-                ->rules(['required']),
+            Text::make('subtitle'),
 
             Markdown::make('description'),
 

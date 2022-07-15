@@ -1,18 +1,23 @@
 <template>
   <div class="container mx-auto">
-    <div class="flex justify-between">
-      <div></div>
+    <div class="flex justify-between items-center">
+      <h1 class="text-xl font-bold">Dante Schrauwen</h1>
 
-      <div class="space-x-4 py-2">
+      <div class="space-x-4 py-8">
         <Item
             :href="route('index')"
             :active="route().current() === 'index'"
         >Home
         </Item>
         <Item
-            :href="route('projects.show', 'test')"
+            :href="route('projects.show')"
             :active="route().current() === 'projects.show'"
         >Projecten
+        </Item>
+        <Item
+            :href="route('contact.show')"
+            :active="route().current() === 'contact.show'"
+        >Contact
         </Item>
       </div>
     </div>

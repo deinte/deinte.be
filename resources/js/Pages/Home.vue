@@ -1,13 +1,12 @@
 <template>
   <App>
 
-    <div class="bg-green-200 py-12">
-
-      <div class="max-w-5xl mx-auto px-6 lg:px-0">
-        <div class="grid grid-cols-4">
-          <img src="https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Begrippenlijst.svg" alt="">
-        </div>
-      </div>
+    <div class="py-32">
+      <h2 class="text-5xl font-bold">Hey!</h2>
+      <p class="text-base text-gray-600 mt-2">This is the place where I will put some info about me, but for now I'm working on some <strong>exciting</strong> projects</p>
+      <p class="text-base text-gray-600">Want to work together or need some improvement in one of your projects?</p>
+      <p class="text-base text-sky-700 mt-2"><a :href="$route('contact.show')" class="underline hover:text-sky-600">contact me</a></p>
+      <p class="text-base text-sky-700 mt-2"><a :href="$route('projects.show')" class="underline hover:text-sky-600">look at my work</a></p>
     </div>
 
   </App>

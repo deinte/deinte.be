@@ -1,8 +1,11 @@
 <template>
   <Link
       :href="href"
-      class="text-center font-bold p-4"
-      :class="{ 'underline': active }"
+      class=" text-center p-4"
+      :class="{
+          'text-black': active,
+          'text-gray-500': !active,
+      }"
   >
     <slot></slot>
   </Link>
