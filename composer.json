@@ -7,14 +7,18 @@
     "require": {
         "php": "^8.0.2",
         "bernhardh/nova-translation-editor": "^2.0",
+        "ebess/advanced-nova-media-library": "^4.0",
         "guzzlehttp/guzzle": "^7.2",
+        "inertiajs/inertia-laravel": "^0.6.3",
         "laravel/framework": "^9.2",
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "league/commonmark": "^2.3",
         "spatie/laravel-markdown": "^2.2",
-        "spatie/laravel-translation-loader": "^2.7"
+        "spatie/laravel-medialibrary": "^10.0.0",
+        "spatie/laravel-translation-loader": "^2.7",
+        "tightenco/ziggy": "^1.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
