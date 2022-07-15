@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class ShowHomePageController extends Controller
 {
-    public function __invoke(Request $request): View
+    public function __invoke(Request $request): Response
     {
-        return view('pages.home');
+        return Inertia::render('Home');
     }
 }
