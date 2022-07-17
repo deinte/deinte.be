@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Item from "../Common/Nav/Item";
+import Item from "../Common/Nav/Item.vue";
 
 export default {
   name: "App",

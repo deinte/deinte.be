@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import App from "../Components/Layouts/App";
-import ProjectCard from "../Components/Projects/ProjectCard";
+import App from "../Components/Layouts/App.vue";
+import ProjectCard from "../Components/Projects/ProjectCard.vue";
 
 export default {
   name: "Projects",
