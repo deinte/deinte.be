@@ -1,6 +1,10 @@
 <template>
   <App>
 
+    <Head>
+      <title>Projecten</title>
+    </Head>
+
     <div class="grid grid-cols-3 gap-y-4">
       <template v-for="project in projects">
         <project-card :project="project"/>

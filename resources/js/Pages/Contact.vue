@@ -1,5 +1,9 @@
 <template>
   <App>
+    <Head>
+      <title>Dante Schrauwen</title>
+    </Head>
+
     <h2 class="text-5xl font-bold">Contact me</h2>
     <p class="text-3xl text-gray-700">Send me an email</p>
 
