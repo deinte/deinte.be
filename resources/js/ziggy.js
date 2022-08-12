@@ -5,3 +5,5 @@ if (typeof window !== 'undefined' && typeof window.Ziggy !== 'undefined') {
 }
 
 export { Ziggy };
+export default class route {
+}

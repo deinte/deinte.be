@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77526cd312ae92e16aafd48107b628c4",
+    "content-hash": "b1987173d0f468446640eca573afbefa",
     "packages": [
         {
             "name": "bernhardh/nova-translation-editor",
@@ -1876,7 +1876,7 @@
                 ],
                 "dusk:assets": [
                     "npm ci",
-                    "TAILWIND_MODE=build npm run prod",
+                    "TAILWIND_MODE=build npm run build",
                     "./vendor/bin/testbench-dusk nova:publish --force"
                 ],
                 "dusk:test": [

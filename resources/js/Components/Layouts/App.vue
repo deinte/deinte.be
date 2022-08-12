@@ -5,18 +5,18 @@
 
       <div class="space-x-4 py-8">
         <Item
-            :href="route('index')"
-            :active="route().current() === 'index'"
+            :href="$route('index')"
+            :active="$route().current() === 'index'"
         >Home
         </Item>
         <Item
-            :href="route('projects.show')"
-            :active="route().current() === 'projects.show'"
+            :href="$route('projects.show')"
+            :active="$route().current() === 'projects.show'"
         >Projecten
         </Item>
         <Item
-            :href="route('contact.show')"
-            :active="route().current() === 'contact.show'"
+            :href="$route('contact.show')"
+            :active="$route().current() === 'contact.show'"
         >Contact
         </Item>
       </div>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Item from "../Common/Nav/Item";
+import Item from "../Common/Nav/Item.vue";
 
 export default {
   name: "App",

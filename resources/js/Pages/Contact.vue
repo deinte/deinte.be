@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import App from "../Components/Layouts/App";
+import App from "../Components/Layouts/App.vue";
 
 export default {
   name: "Contact",
