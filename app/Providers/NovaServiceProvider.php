@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Nova\Dashboards\Main;
 use Bernhardh\NovaTranslationEditor\NovaTranslationEditor;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
@@ -9,76 +10,32 @@ use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        parent::boot();
-    }
-
-    /**
-     * Register the Nova routes.
-     *
-     * @return void
-     */
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
-    /**
-     * Register the Nova gate.
-     *
-     * This gate determines who can access Nova in non-local environments.
-     *
-     * @return void
-     */
-    protected function gate()
+    protected function gate(): void
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                //
-            ]);
+            return $user;
         });
     }
 
-    /**
-     * Get the dashboards that should be listed in the Nova sidebar.
-     *
-     * @return array
-     */
-    protected function dashboards()
+    protected function dashboards(): array
     {
         return [
-            new \App\Nova\Dashboards\Main,
+            new Main(),
         ];
     }
 
-    /**
-     * Get the tools that should be listed in the Nova sidebar.
-     *
-     * @return array
-     */
-    public function tools()
+    public function tools(): array
     {
         return [
             new NovaTranslationEditor()
         ];
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }
