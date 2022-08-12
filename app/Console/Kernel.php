@@ -2,11 +2,20 @@
 
 namespace App\Console;
 
+use Bugsnag\BugsnagLaravel\OomBootstrapper;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+    protected function bootstrappers(): array
+    {
+        return array_merge(
+            [OomBootstrapper::class],
+            parent::bootstrappers(),
+        );
+    }
+
     /**
      * Define the application's command schedule.
      *

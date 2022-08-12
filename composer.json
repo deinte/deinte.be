@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.0.2",
         "bernhardh/nova-translation-editor": "^2.0",
+        "bugsnag/bugsnag-laravel": "^2.24",
         "ebess/advanced-nova-media-library": "^4.0",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.6.3",
