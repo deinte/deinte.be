@@ -16,7 +16,7 @@ class ProjectListResource extends JsonResource
         return [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
-            'cover' => !empty($media->getSrcset()) ? $media->getSrcset() : $media->previewUrl,
+            'cover' => ! empty($media->getSrcset('default')) ? $media->getSrcset('default') : $media->previewUrl,
         ];
     }
 }
