@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Project extends Model implements HasMedia
 {
@@ -29,5 +30,15 @@ class Project extends Model implements HasMedia
         $this->addMediaCollection('default')
             ->onlyKeepLatest(1)
             ->withResponsiveImages();
+    }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('default')
+            ->withResponsiveImages()
+            ->width(800);
+
+        $this->addMediaConversion('preview')
+            ->width(300);
     }
 }
