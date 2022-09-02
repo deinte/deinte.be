@@ -35,6 +35,7 @@ class Project extends Resource
             Boolean::make('published'),
 
             Images::make('Images', 'default')
+                ->withResponsiveImages()
                 ->rules(['required']),
         ];
     }

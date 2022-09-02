@@ -23,4 +23,11 @@ class Project extends Model implements HasMedia
     {
         return $query->where('published', true);
     }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('default')
+            ->onlyKeepLatest(1)
+            ->withResponsiveImages();
+    }
 }
