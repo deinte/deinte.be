@@ -4,6 +4,11 @@ import {InertiaProgress} from '@inertiajs/progress';
 import VueClickAway from "vue3-click-away";
 import {Link, Head} from '@inertiajs/inertia-vue3';
 import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
+import {library} from '@fortawesome/fontawesome-svg-core';
+import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
+library.add(faGlobe);
 
 createInertiaApp({
     resolve: name => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
@@ -11,13 +16,13 @@ createInertiaApp({
         const app = createApp({render: () => h(App, props)})
             .component('Link', Link)
             .component('Head', Head)
+            .component('font-awesome-icon', FontAwesomeIcon)
             .use(plugin)
             .use(VueClickAway);
 
         app.config.globalProperties.$route = route
 
         app.mount(el);
-
     },
 })
 

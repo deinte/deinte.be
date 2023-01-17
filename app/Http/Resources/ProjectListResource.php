@@ -17,6 +17,7 @@ class ProjectListResource extends JsonResource
         return [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
+            'website' => $this->website,
             'cover' => [
                 'srcset' => $media->getSrcset('default'),
                 'url' => $media->originalUrl,

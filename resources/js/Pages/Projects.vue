@@ -1,18 +1,19 @@
 <template>
-  <App>
+    <App>
 
-    <Head>
-      <title>Projecten</title>
-    </Head>
+        <Head>
+            <title>Projecten</title>
+        </Head>
 
-    <div class="grid grid-cols-3 gap-y-16 py-16">
-      <template v-for="project in projects">
-        <project-card :project="project"/>
-      </template>
-    </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16 py-16">
 
+            <template v-for="project in projects">
+                <project-card :project="project"/>
+            </template>
 
-  </App>
+        </div>
+
+    </App>
 </template>
 
 <script>
@@ -20,19 +21,19 @@ import App from "../Components/Layouts/App.vue";
 import ProjectCard from "../Components/Projects/ProjectCard.vue";
 
 export default {
-  name: "Projects",
+    name: "Projects",
 
-  components: {
-    ProjectCard,
-    App
-  },
+    components: {
+        ProjectCard,
+        App
+    },
 
-  props: {
-    projects: {
-      type: Array,
-      required: true,
+    props: {
+        projects: {
+            type: Array,
+            required: true,
+        }
     }
-  }
 }
 </script>
 
