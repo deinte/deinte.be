@@ -5,7 +5,7 @@
             <title>Projecten</title>
         </Head>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16 py-16">
+        <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16 py-16">
 
             <template v-for="project in projects">
                 <project-card :project="project"/>

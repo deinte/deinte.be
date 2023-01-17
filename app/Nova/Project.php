@@ -30,7 +30,8 @@ class Project extends Resource
 
             Text::make('subtitle'),
 
-            Text::make('website'),
+            Text::make('website')
+                ->rules('url'),
 
             Markdown::make('description'),
 
