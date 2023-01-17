@@ -26,20 +26,22 @@ class Project extends Resource
             ID::make()->sortable(),
 
             Text::make('title')
-                ->rules(['required']),
+                ->rules('required'),
 
-            Text::make('subtitle'),
+            Text::make('subtitle')
+                ->rules('required', 'string'),
 
             Text::make('website')
-                ->rules('url'),
+                ->rules('nullable', 'url'),
 
             Markdown::make('description'),
 
-            Boolean::make('published'),
+            Boolean::make('published')
+                ->rules('boolean'),
 
             Images::make('Images', 'default')
                 ->withResponsiveImages()
-                ->rules(['required']),
+                ->rules('required', 'min:1'),
         ];
     }
 }
