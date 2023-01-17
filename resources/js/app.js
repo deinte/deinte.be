@@ -1,12 +1,14 @@
 import {createApp, h} from 'vue';
 import {createInertiaApp} from '@inertiajs/inertia-vue3';
 import {InertiaProgress} from '@inertiajs/progress';
-import VueClickAway from "vue3-click-away";
+import VueClickAway from 'vue3-click-away';
 import {Link, Head} from '@inertiajs/inertia-vue3';
-import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
+import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import VueEasyLightbox from 'vue-easy-lightbox';
+import 'vue-easy-lightbox/external-css/vue-easy-lightbox.css';
 
 library.add(faGlobe);
 
@@ -18,7 +20,8 @@ createInertiaApp({
             .component('Head', Head)
             .component('font-awesome-icon', FontAwesomeIcon)
             .use(plugin)
-            .use(VueClickAway);
+            .use(VueClickAway)
+            .use(VueEasyLightbox);
 
         app.config.globalProperties.$route = route
 

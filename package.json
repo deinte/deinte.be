@@ -29,6 +29,7 @@
         "@vitejs/plugin-vue": "^3.0.3",
         "shiki": "^0.10.1",
         "vue": "^3.2.37",
+        "vue-easy-lightbox": "^1.11.0",
         "vue3-click-away": "^1.2.4",
         "ziggy-js": "^1.4.6"
     }

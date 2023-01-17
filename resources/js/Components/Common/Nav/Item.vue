@@ -1,7 +1,7 @@
 <template>
   <Link
       :href="href"
-      class=" text-center p-4"
+      class=" text-center py-2 sm:p-4 last:pr-0"
       :class="{
           'text-black': active,
           'text-gray-500': !active,
