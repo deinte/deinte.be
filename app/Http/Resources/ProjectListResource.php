@@ -13,10 +13,14 @@ class ProjectListResource extends JsonResource
     {
         /** @var Media $media */
         $media = $this->getFirstMedia();
+
         return [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
-            'cover' => ! empty($media->getSrcset('default')) ? $media->getSrcset('default') : $media->previewUrl,
+            'cover' => [
+                'srcset' => $media->getSrcset('default'),
+                'url' => $media->originalUrl,
+            ],
         ];
     }
 }

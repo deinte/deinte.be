@@ -1,7 +1,12 @@
 <template>
     <div class="text-center">
         <div class="aspect-video">
-            <img :srcset="project.cover" alt="" class="w-full h-full object-cover">
+            <img
+                class="w-full h-full object-cover"
+                :srcset="project.cover.srcset"
+                :src="project.cover.src"
+                :alt="project.title"
+            >
         </div>
 
         <h3 class="text-2xl font-bold mt-2">{{ project.title }}</h3>
