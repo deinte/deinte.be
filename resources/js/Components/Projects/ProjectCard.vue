@@ -19,7 +19,11 @@
 
                 <ul role="list" class="flex space-x-5" v-if="project.website">
                     <li>
-                        <a :href="project.website" class="transition-all text-gray-400 hover:text-gray-500">
+                        <a
+                            target="_blank"
+                            :href="project.website"
+                            class="transition-all text-gray-400 hover:text-gray-500"
+                        >
                             <span class="sr-only">Go to this project</span>
                             <font-awesome-icon icon="fa-solid fa-globe"/>
                         </a>
