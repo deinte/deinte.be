@@ -3,7 +3,6 @@
 use App\Http\Controllers\Contact\ShowContactFormController;
 use App\Http\Controllers\Pages\ShowHomePageController;
 use App\Http\Controllers\Pages\ShowProjectsController;
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
