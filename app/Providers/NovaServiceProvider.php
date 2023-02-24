@@ -7,6 +7,7 @@ use Bernhardh\NovaTranslationEditor\NovaTranslationEditor;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Outl1ne\MenuBuilder\MenuBuilder;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -35,7 +36,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools(): array
     {
         return [
-            new NovaTranslationEditor()
+            new NovaTranslationEditor(),
+            MenuBuilder::make(),
         ];
     }
 }

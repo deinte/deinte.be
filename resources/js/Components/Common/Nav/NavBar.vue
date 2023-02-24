@@ -4,8 +4,8 @@
             <div class="container">
                 <div class="lg:flex items-center justify-between gap-6">
                     <div class="flex items-center justify-between">
-                        <a href="index.html">
-                            <img src="/assets/images/logo-dark.svg" class="" alt="logo"/>
+                        <a :href="$route('index')" class="py-2">
+                            <img :src="logo" class="w-32" alt="logo"/>
                         </a>
                         <button
                             class="text-end mobile-menu-button lg:hidden"
@@ -27,78 +27,17 @@
                         }"
                     >
                         <ul class="lg:space-x-8 space-y-4 lg:space-y-0 lg:flex items-center mt-6 lg:mt-0 max-[1024px]:max-h-80 max-[1024px]:overflow-scroll">
-                            <li class="nav-active">
-                                <a href="index.html"
-                                   class="uppercase text-sm font-medium lg:py-9 tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="relative group">
-                                <a href="javaScript:void();"
-                                   class="uppercase text-sm font-medium lg:py-9 tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">
-                                    Pages
-                                    <span class="ml-1.5">
-                                            <svg width="8" height="6" class="inline-block" viewBox="0 0 8 6" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0.0466659 0.744778L3.86978 5.53751C3.93301 5.61663 4.06672 5.61663 4.12995 5.53751L7.95348 0.744445C7.99899 0.68712 8.01247 0.601674 7.98793 0.527294C7.98285 0.511735 7.97719 0.499838 7.97245 0.490935C7.94325 0.436855 7.88717 0.403076 7.8256 0.403076H0.174128C0.112893 0.403076 0.0564835 0.436772 0.02753 0.490935C0.0226212 0.500004 0.0169636 0.511985 0.0122212 0.526378C-0.0124892 0.601674 0.000906017 0.687287 0.0466659 0.744778Z"
-                                                    fill="#272727"
-                                                />
-                                            </svg>
-                                        </span>
-                                </a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li>
-                                            <a href="about.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="faqs.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Faqs</a>
-                                        </li>
-                                        <li>
-                                            <a href="services.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Service</a>
-                                        </li>
-                                        <li>
-                                            <a href="utility.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Utility</a>
-                                        </li>
-                                        <li>
-                                            <a href="pricing.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Pricing</a>
-                                        </li>
-                                        <li>
-                                            <a href="error.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Error</a>
-                                        </li>
-                                        <li>
-                                            <a href="team.html"
-                                               class="uppercase text-sm font-medium tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">Team</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="work.html"
-                                   class="uppercase text-sm font-medium lg:py-9 tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">
-                                    Work
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog.html"
-                                   class="uppercase text-sm font-medium lg:py-9 tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html"
-                                   class="uppercase text-sm font-medium lg:py-9 tracking-[0.86px] text-dark-semilight relative hover:text-dark duration-300">
-                                    Contact
-                                </a>
-                            </li>
-                            <a href="contact.html" class="btn-blue navbar-btn lg:!ml-16">Start a project</a>
+                            <template v-if="mainMenu" v-for="item in mainMenu.menuItems">
+                                <template v-if="item.children.length">
+                                    <SubNav :item="item"/>
+                                </template>
+
+                                <template v-else>
+                                    <NavItem :item="item"/>
+                                </template>
+                            </template>
+
+                            <a :href="$route('contact.show')" class="btn-blue navbar-btn lg:!ml-16">Start a project</a>
                         </ul>
                     </div>
                 </div>
@@ -107,10 +46,15 @@
     </header>
 </template>
 
-<script setup lang="ts">
-import {ref} from 'vue';
+<script setup>
+import {computed, ref} from 'vue'
+import {usePage} from '@inertiajs/inertia-vue3'
+import SubNav from "./Sub/SubNav.vue";
+import NavItem from "./NavItem.vue";
 
-const showMobileNav = ref<boolean>(false)
+const showMobileNav = ref(false);
+const mainMenu = computed(() => usePage().props.value.menus.main);
+const logo = computed(() => usePage().props.value.logo);
 </script>
 
 <style scoped>

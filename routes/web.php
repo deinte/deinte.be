@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', ShowHomePageController::class)->name('index');
-Route::get('/projects', ShowProjectsController::class)->name('projects.show');
+Route::get('/portfolio', ShowProjectsController::class)->name('portfolio.show');
 Route::get('/contact', ShowContactFormController::class)->name('contact.show');
