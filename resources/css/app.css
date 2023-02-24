@@ -1,3 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+    .btn-green{
+        @apply bg-green text-center text-[#fafafa] tracking-[0.84px] uppercase text-sm font-medium rounded-lg py-[18px] px-9 inline-block hover:bg-dark duration-300;
+    }
+    .btn-blue{
+        @apply bg-transparent text-center text-blue tracking-[0.84px] uppercase text-sm font-medium rounded-lg py-3.5 px-6 inline-block hover:bg-blue border-[2px] border-blue hover:text-white duration-300
+    }
+    .form-input{
+        @apply border border-light block rounded-lg w-full placeholder:text-muted px-6 py-4 focus:border-green focus:ring-transparent font-medium text-[15px];
+    }
+    .form-checkbox{
+        @apply border-light rounded focus:ring-transparent focus:outline-none h-4 w-4 text-green;
+    }
+}
+
+.client-slider-pagination .swiper-pagination-bullet,
+.work-slider-pagination .swiper-pagination-bullet{
+    @apply bg-green h-2 w-2;
+}
+
+.client-slider-pagination .swiper-pagination-bullet-active,
+.work-slider-pagination .swiper-pagination-bullet-active{
+    @apply bg-green w-4 rounded-lg h-4;
+}
+
+.faq .is-active .faq-arrow{
+    @apply rotate-180;
+}
+
+.faq .is-active{
+    @apply shadow-custom;
+}
+
+.main-menu .nav-active > a{
+    @apply after:bg-green-semilight after:absolute after:w-full after:h-2 relative after:left-0 inline-block after:bottom-0 lg:after:bottom-9 after:-z-10 text-dark;
+}
+
+.sub-menu ul{
+    @apply hidden group-hover:grid lg:absolute top-14 lg:left-1/2 lg:-translate-x-1/2 grid-cols-1 mt-3 lg:mt-0 lg:grid-cols-2 gap-4 p-6 min-w-[320px] bg-white shadow-custom rounded-2xl;
+}
+
+.main-menu .sub-menu a{
+    @apply inline-block relative;
+}
+
+.main-menu .sub-menu .sub-active{
+    @apply after:bg-green-semilight after:absolute after:w-full after:h-2 relative after:left-0 inline-block after:bottom-0 after:-z-10 text-dark;
+}
+
+.nav-active .sub-menu ul{
+    @apply top-[88px];
+}
+
+@media (max-width: 1024px) {
+    .main-menu .mobile-menu-bg{
+        @apply bg-white shadow-custom py-5;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-menu .stickyadd{
+        @apply bg-white shadow-custom duration-300;
+    }
+}

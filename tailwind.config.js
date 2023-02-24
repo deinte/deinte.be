@@ -7,12 +7,13 @@ module.exports = {
     presets: [],
     darkMode: 'media', // or 'class'
     theme: {
+        extend: {},
         screens: {
-            sm: '640px',
+            sm: '540px',
             md: '768px',
             lg: '1024px',
-            xl: '1280px',
-            '2xl': '1536px',
+            xl: '1172px',
+            '2xl': '1280px',
         },
         colors: ({colors}) => ({
             inherit: colors.inherit,
@@ -28,20 +29,38 @@ module.exports = {
             red: colors.red,
             orange: colors.orange,
             amber: colors.amber,
-            yellow: colors.yellow,
+            yellow: {
+                ...colors.yellow,
+                DEFAULT: '#F9EBCA',
+            },
             lime: colors.lime,
-            green: colors.green,
+            dark: {
+                DEFAULT: "#272727",
+                light: "#7D7D7D",
+                semilight: "#686868",
+            },
+            green: {
+                ...colors.green,
+                DEFAULT: "#3EC37D",
+                light: "#EFFFFB",
+                semilight: "#C5EDD8",
+            },
             emerald: colors.emerald,
             teal: colors.teal,
             cyan: colors.cyan,
             sky: colors.sky,
-            blue: colors.blue,
+            blue: {
+                ...colors.blue,
+                DEFAULT: '#4F98CA',
+            },
             indigo: colors.indigo,
             violet: colors.violet,
             purple: colors.purple,
             fuchsia: colors.fuchsia,
             pink: colors.pink,
             rose: colors.rose,
+            muted: '#A9A9A9',
+            light: '#DFDFDF',
         }),
         columns: {
             auto: 'auto',
@@ -219,6 +238,7 @@ module.exports = {
             '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
             inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
             none: 'none',
+            custom: '0px 16px 48px rgba(39, 39, 39, 0.1)',
         },
         boxShadowColor: ({theme}) => theme('colors'),
         caretColor: ({theme}) => theme('colors'),
@@ -235,7 +255,10 @@ module.exports = {
             150: '1.5',
             200: '2',
         },
-        container: {},
+        container: {
+            center: true,
+            padding: '1rem',
+        },
         content: {
             none: 'none',
         },
@@ -352,6 +375,7 @@ module.exports = {
             DEFAULT: '1',
         },
         fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
             sans: [
                 'ui-sans-serif',
                 'system-ui',
