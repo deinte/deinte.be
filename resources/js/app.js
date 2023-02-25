@@ -5,12 +5,12 @@ import VueClickAway from 'vue3-click-away';
 import {Link, Head} from '@inertiajs/inertia-vue3';
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import 'vue-easy-lightbox/external-css/vue-easy-lightbox.css';
 
-library.add(faGlobe);
+library.add(faLink);
 
 createInertiaApp({
     resolve: name => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),

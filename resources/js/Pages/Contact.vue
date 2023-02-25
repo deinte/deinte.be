@@ -1,27 +1,27 @@
 <template>
-  <App>
-    <Head>
-      <title>Dante Schrauwen</title>
-    </Head>
+    <App>
+        <Head>
+            <title>Dante Schrauwen</title>
+        </Head>
 
-    <h2 class="text-5xl font-bold">Contact me</h2>
-    <p class="text-3xl text-gray-700">Send me an email</p>
+        <Breadcrumb page="Contact"/>
 
-    <p>contact [at] danteschrauwen [dot] be</p>
+        <Divider/>
 
-  </App>
+        <div class="py-16 container">
+            <h2 class='text-5xl font-bold'>Contact me</h2>
+            <p class='text-3xl text-gray-700'>Send me an email</p>
+
+            <p>contact [at] danteschrauwen [dot] be</p>
+        </div>
+
+    </App>
 </template>
 
-<script>
-import App from "../Components/Layouts/App.vue";
-
-export default {
-  name: "Contact",
-
-  components: {
-    App
-  },
-}
+<script setup>
+import Breadcrumb from '../Components/Cms/Breadcrumb.vue';
+import Divider from '../Components/Utils/Divider.vue';
+import App from '../Components/Layouts/App.vue';
 </script>
 
 <style scoped>

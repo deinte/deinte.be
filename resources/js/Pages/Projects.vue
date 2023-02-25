@@ -2,39 +2,23 @@
     <App>
 
         <Head>
-            <title>Projecten</title>
+            <title>Portfolio</title>
         </Head>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 py-16">
+        <Breadcrumb page="Portfolio"/>
 
-            <template v-for="project in projects">
-                <project-card :project="project"/>
-            </template>
+        <Divider/>
 
-        </div>
+        <Portfolio/>
 
     </App>
 </template>
 
-<script>
-import App from "../Components/Layouts/App.vue";
-import ProjectCard from "../Components/Projects/ProjectCard.vue";
-
-export default {
-    name: "Projects",
-
-    components: {
-        ProjectCard,
-        App
-    },
-
-    props: {
-        projects: {
-            type: Array,
-            required: true,
-        }
-    }
-}
+<script setup>
+import App from '../Components/Layouts/App.vue';
+import Portfolio from '../Components/Portfolio/Portfolio.vue';
+import Breadcrumb from '../Components/Cms/Breadcrumb.vue';
+import Divider from '../Components/Utils/Divider.vue';
 </script>
 
 <style scoped>

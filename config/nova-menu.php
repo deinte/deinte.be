@@ -49,7 +49,19 @@ return [
             'name' => 'Main',
             'unique' => true,
             'max_depth' => 2,
-            'menu_item_types' => []
+            'menu_item_types' => [],
+        ],
+        'footer_main' => [
+            'name' => 'Footer Main',
+            'unique' => true,
+            'max_depth' => 1,
+            'menu_item_types' => [],
+        ],
+        'footer_clients' => [
+            'name' => 'Footer Clients',
+            'unique' => true,
+            'max_depth' => 1,
+            'menu_item_types' => [],
         ]
     ],
 

@@ -12,9 +12,14 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
-            'logo' => asset('img/logo-blauw-800x.png'),
+            'logo' => [
+                'color' => asset('img/logo-blauw-800x.png'),
+                'white' => asset('img/logo-wit.png'),
+            ],
             'menus' => [
                 'main' => nova_get_menu_by_slug('main', $locale = null),
+                'footer_main' => nova_get_menu_by_slug('footer_main', $locale = null),
+                'footer_clients' => nova_get_menu_by_slug('footer_clients', $locale = null),
             ],
         ]);
     }

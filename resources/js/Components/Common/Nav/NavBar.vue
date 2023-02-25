@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="lg:flex items-center justify-between gap-6">
                     <div class="flex items-center justify-between">
-                        <a :href="$route('index')" class="py-2">
+                        <a :href="$route('index')" class="py-3">
                             <img :src="logo" class="w-32" alt="logo"/>
                         </a>
                         <button
@@ -12,9 +12,13 @@
                             @click="showMobileNav = !showMobileNav"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                 stroke="currentColor" class="w-8 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                                 stroke="currentColor" class="w-8 h-8"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                                />
                             </svg>
                         </button>
                     </div>
@@ -37,7 +41,7 @@
                                 </template>
                             </template>
 
-                            <a :href="$route('contact.show')" class="btn-blue navbar-btn lg:!ml-16">Start a project</a>
+                            <a :href="$route('contact.show')" class="btn-blue navbar-btn lg:!ml-16">get in contact</a>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +58,7 @@ import NavItem from "./NavItem.vue";
 
 const showMobileNav = ref(false);
 const mainMenu = computed(() => usePage().props.value.menus.main);
-const logo = computed(() => usePage().props.value.logo);
+const logo = computed(() => usePage().props.value.logo.color);
 </script>
 
 <style scoped>
