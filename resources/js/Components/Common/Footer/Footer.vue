@@ -63,11 +63,10 @@
                             </ul>
                         </div>
                         <div class="text-white lg:col-start-3">
-                            <p class="font-semibold text-lg leading-7 text-white">Find Us</p>
-                            <p class="md:mt-8 mt-4 text-[#7B7B7B] text-[15px] leading-[22px]">Greenwich Village & Soho,
-                                10012 New York, USA</p>
-                            <p class="mt-6 text-[#7B7B7B] text-[15px] leading-[22px]">800 123-456</p>
-                            <p class="text-[15px] leading-[22px] text-[#7B7B7B]">digity@example.com</p>
+                            <a
+                                :href="$route('contact.show')"
+                                class="font-semibold text-lg leading-7 text-white"
+                            >Contact me</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +74,7 @@
             <div class="bg-[#3D3D3D] h-px w-full block"></div>
             <div class="grid grid-cols-1">
                 <div class="py-8">
-                    <p class="text-[#7B7B7B] text-[15px] leading-7">&copy; 2023 Copyright Dante Schrauwen.</p>
+                    <p class="text-[#7B7B7B] text-[15px] leading-7">Copyright &copy; 2022 - {{ new Date().getFullYear() }} Dante Schrauwen | All rights reserved.</p>
                 </div>
             </div>
         </div>
