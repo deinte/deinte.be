@@ -59,6 +59,19 @@ import NavItem from "./NavItem.vue";
 const showMobileNav = ref(false);
 const mainMenu = computed(() => usePage().props.value.menus.main);
 const logo = computed(() => usePage().props.value.logo.color);
+
+window.addEventListener('scroll', (e) => {
+    const nav = document.querySelector('nav');
+    const scrollTop = document.documentElement.scrollTop;
+
+    if (scrollTop > 80) {
+        nav.classList.add("stickyadd");
+
+        return
+    }
+
+    nav.classList.remove("stickyadd");
+});
 </script>
 
 <style scoped>

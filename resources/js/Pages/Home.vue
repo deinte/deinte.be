@@ -2,7 +2,7 @@
     <App>
 
         <Head>
-            <title>Dante Schrauwen</title>
+            <title>Home</title>
         </Head>
 
         <Hero/>

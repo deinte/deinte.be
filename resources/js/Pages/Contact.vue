@@ -1,7 +1,7 @@
 <template>
     <App>
         <Head>
-            <title>Dante Schrauwen</title>
+            <title>Contact</title>
         </Head>
 
         <Breadcrumb page="Contact"/>
