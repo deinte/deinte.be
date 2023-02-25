@@ -11,7 +11,7 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'text' => $this->faker->paragraphs(5, true),
-            'author' => "Dante Schrauwen",
+            'author' => 'Dante Schrauwen',
         ];
     }
 

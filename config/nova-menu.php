@@ -7,7 +7,6 @@ return [
     |------------------|
     */
 
-
     /*
     |--------------------------------------------------------------------------
     | Table names
@@ -16,7 +15,6 @@ return [
 
     'menus_table_name' => 'nova_menu_menus',
     'menu_items_table_name' => 'nova_menu_menu_items',
-
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +27,6 @@ return [
     */
 
     'locales' => ['en_US' => 'English'],
-
 
     /*
     |--------------------------------------------------------------------------
@@ -62,7 +59,7 @@ return [
             'unique' => true,
             'max_depth' => 1,
             'menu_item_types' => [],
-        ]
+        ],
     ],
 
     /*
@@ -99,7 +96,6 @@ return [
 
     'resource' => Outl1ne\MenuBuilder\Nova\Resources\MenuResource::class,
 
-
     /*
     |--------------------------------------------------------------------------
     | Menu Model
@@ -110,7 +106,6 @@ return [
     */
 
     'menu_model' => Outl1ne\MenuBuilder\Models\Menu::class,
-
 
     /*
     |--------------------------------------------------------------------------
@@ -123,7 +118,6 @@ return [
 
     'menu_item_model' => Outl1ne\MenuBuilder\Models\MenuItem::class,
 
-
     /*
     |--------------------------------------------------------------------------
     | Auto-load migrations
@@ -134,6 +128,5 @@ return [
     */
 
     'auto_load_migrations' => true,
-
 
 ];

@@ -25,9 +25,9 @@ class PostObserver
 
     private function calculateReadDuration(...$text): string
     {
-        $totalWords = str_word_count(implode(" ", $text));
+        $totalWords = str_word_count(implode(' ', $text));
         $minutesToRead = round($totalWords / 200);
 
-        return (int)max(1, $minutesToRead);
+        return (int) max(1, $minutesToRead);
     }
 }

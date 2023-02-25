@@ -16,7 +16,7 @@ class Post extends Model
     protected $guarded = ['id'];
 
     protected $casts = [
-        'published' => 'boolean'
+        'published' => 'boolean',
     ];
 
     public function getRouteKeyName(): string

@@ -50,7 +50,7 @@ class PostMarkdownTest extends TestCase
         $this->assertStringContainsString('<li>Item 1</li>', $post->text_as_html);
         $this->assertStringContainsString('<li>Item 2</li>', $post->text_as_html);
 
-        $this->get('/posts/' . $post->slug)
+        $this->get('/posts/'.$post->slug)
             ->assertStatus(200)
             ->assertSeeInOrder([
                 '<ul>',

@@ -3,6 +3,6 @@
 return [
     'groups' => [],
     'languages' => [
-        'en'
-    ]
+        'en',
+    ],
 ];

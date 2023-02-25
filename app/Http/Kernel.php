@@ -15,7 +15,6 @@ class Kernel extends HttpKernel
         );
     }
 
-
     /**
      * The application's global HTTP middleware stack.
      *
