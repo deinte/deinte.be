@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white rounded-2xl overflow-hidden py-4 md:max-w-[420px]">
-        <a :href="item.website">
+    <div class="bg-white rounded-2xl overflow-hidden py-4">
+        <a :href="item.website" class="aspect-video">
             <img
                 class="w-full h-full object-cover"
                 :srcset="item.cover.srcset"
