@@ -20,7 +20,7 @@
                         :href="item.website"
                         class="text-green hover:text-green-700 transition-all duration-300"
                     >
-                        <font-awesome-icon icon="fa-solid fa-link"/>
+                        <font-awesome-icon :icon="['fas', 'link']"/>
                     </a>
                 </template>
             </div>

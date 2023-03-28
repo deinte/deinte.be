@@ -5,10 +5,12 @@
                 <div class="md:col-span-2 md:border-r border-[#3D3D3D]">
                     <div class="max-w-xs">
                         <img :src="logo" class="w-28" alt=""/>
-                        <p class="mt-8 text-[15px] leading-7 text-[#7B7B7B]">Transforming ideas into digital
-                            reality.</p>
+                        <p class="mt-8 text-[15px] leading-7 text-[#7B7B7B]">
+                            Transforming ideas into digital reality.
+                        </p>
                         <div class="md:mt-12 mt-8">
                             <ul class="flex items-center space-x-4">
+                                <!--
                                 <li>
                                     <a href="#">
                                         <img src="/assets/images/fb.svg" alt=""/>
@@ -29,6 +31,7 @@
                                         <img src="/assets/images/behance.svg" alt=""/>
                                     </a>
                                 </li>
+                                -->
                             </ul>
                         </div>
                     </div>
@@ -74,7 +77,9 @@
             <div class="bg-[#3D3D3D] h-px w-full block"></div>
             <div class="grid grid-cols-1">
                 <div class="py-8">
-                    <p class="text-[#7B7B7B] text-[15px] leading-7">Copyright &copy; 2022 - {{ new Date().getFullYear() }} Dante Schrauwen | All rights reserved.</p>
+                    <p class="text-[#7B7B7B] text-[15px] leading-7">Copyright &copy; 2022 - {{
+                            new Date().getFullYear()
+                        }} Dante Schrauwen | All rights reserved.</p>
                 </div>
             </div>
         </div>
