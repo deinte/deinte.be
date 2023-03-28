@@ -10,28 +10,11 @@
                         </p>
                         <div class="md:mt-12 mt-8">
                             <ul class="flex items-center space-x-4">
-                                <!--
                                 <li>
-                                    <a href="#">
-                                        <img src="/assets/images/fb.svg" alt=""/>
+                                    <a href="https://github.com/deinte">
+                                        <font-awesome-icon :icon="['fab', 'github']"/>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/assets/images/twiiter.svg" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/assets/images/linkedin.svg" alt=""/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/assets/images/behance.svg" alt=""/>
-                                    </a>
-                                </li>
-                                -->
                             </ul>
                         </div>
                     </div>
@@ -89,6 +72,7 @@
 <script setup>
 import {computed} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const logo = computed(() => usePage().props.value.logo.white);
 const footerMainMenu = computed(() => usePage().props.value.menus.footer_main);
